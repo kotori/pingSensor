@@ -34,24 +34,19 @@ or
 pingSensor *mySensor = new pingSensor( TRIGGER_PIN, ECHO_PIN, 200, CONV_INCHES );
 ```
 
-3. Initialize the pinmodes of the pingSensor object:
-```cpp
-mySensor->init();
-```
-
-4. Get Ping))) results:
+3. Get Ping))) results:
 ```cpp
 mySensor->doPing();
 ```
 
-5. Check range:
+4. Check range:
 ```cpp
 if( mySensor->checkRange() == true ) {
   // Sensor is in range, so do stuff.
 }
 ```
 
-6. If you need the actual distance travelled.
+5. If you need the actual distance travelled.
 ```cpp
 // Returns a value in units specified with conversion method.
 long distTraveled = mySensor->getDistance();

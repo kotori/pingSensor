@@ -22,8 +22,6 @@ public:
   pingSensor( byte trig, byte echo, int maxDistance );
   pingSensor( byte trig, byte echo, int maxDistance, CONVERSION_TYPE convType );
   
-  void init( void );
-  
   void doPing( void );
   
   long getDistance( void );
@@ -33,6 +31,7 @@ public:
   boolean checkRange( void );
   
 private:
+  void init( void );
 
   long msToInches( long ms );
   long msToCm( long ms );

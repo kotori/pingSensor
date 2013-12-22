@@ -14,6 +14,8 @@ pingSensor::pingSensor( byte trig, byte echo ) {
   _distance = 0;
   _convType = CONV_CM;
   _maxDistance = DEF_PING_DISTANCE;
+
+  init();
 }
 
 /*
@@ -29,6 +31,8 @@ pingSensor::pingSensor( byte trig, byte echo, int maxDistance ) {
   _distance = 0;
   _convType = CONV_CM;
   _maxDistance = maxDistance;
+
+  init();
 }
 
 /*
@@ -43,6 +47,8 @@ pingSensor::pingSensor( byte trig, byte echo, int maxDistance, CONVERSION_TYPE c
   _distance = 0;
   _convType = convType;
   _maxDistance = maxDistance;
+
+  init();
 }
 
 /*
