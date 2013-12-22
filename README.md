@@ -20,14 +20,17 @@ The pingSensor library is very easy to use.
 
 2. Create an object:
 ```cpp
+// trigger pin, echo pin
 pingSensor *mySensor = new pingSensor( TRIGGER_PIN, ECHO_PIN );
 ```
 or
 ```cpp
+// trigger pin, echo pin, max ping distance
 pingSensor *mySensor = new pingSensor( TRIGGER_PIN, ECHO_PIN, 200 );
 ```
 or
 ```cpp
+// trigger pin, echo pin, max ping distance, conversion method (CONV_CM | CONV_INCHES)
 pingSensor *mySensor = new pingSensor( TRIGGER_PIN, ECHO_PIN, 200, CONV_INCHES );
 ```
 
@@ -43,8 +46,9 @@ if( mySensor->checkRange() == true ) {
 }
 ```
 
-5.) If you need the actual distance travelled.
+5. If you need the actual distance travelled.
 ```cpp
+// Returns a value in units specified with conversion method.
 long distTraveled = mySensor->getDistance();
 ```
 
