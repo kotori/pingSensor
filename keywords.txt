@@ -1,0 +1,26 @@
+###################################
+# Syntax Coloring Map For NewPing
+###################################
+
+###################################
+# Datatypes (KEYWORD1)
+###################################
+
+pingSensor	KEYWORD1
+
+###################################
+# Methods and Functions (KEYWORD2)
+###################################
+
+init	KEYWORD2
+doPing	KEYWORD2
+checkRange	KEYWORD2
+getDistance	KEYWORD2
+getConvType	KEYWORD2
+
+###################################
+# Constants (LITERAL1)
+###################################
+
+CONV_INCHES	LITERAL1
+CONV_CM	LITERAL1
