@@ -4,6 +4,49 @@ pingSensor
 Arduino ping sensor support class
 
 
+## Hardware Requirements
+* SR-04 Ping))) Sensor
+
+## Installation
+Copy the pingSensor library directory to the `<SKETCHBOOK>/libraries/` directory.
+
+## Usage
+The pingSensor library is very easy to use.
+
+1. Import the library:
+```cpp
+#include <pingSensor.h>
+```
+
+2. Create an object:
+```cpp
+pingSensor *mySensor = new pingSensor( TRIGGER_PIN, ECHO_PIN );
+```
+or
+```cpp
+pingSensor *mySensor = new pingSensor( TRIGGER_PIN, ECHO_PIN, 200 );
+```
+or
+```cpp
+pingSensor *mySensor = new pingSensor( TRIGGER_PIN, ECHO_PIN, 200, CONV_INCHES );
+```
+
+3. Get Ping))) results:
+```cpp
+mySensor->doPing();
+```
+
+4. Check range:
+```cpp
+if( mySensor->checkRange() == true ) {
+  // Sensor is in range, so do stuff.
+}
+```
+
+5.) If you need the actual distance travelled.
+```cpp
+long distTraveled = mySensor->getDistance();
+```
 
 ## License
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
