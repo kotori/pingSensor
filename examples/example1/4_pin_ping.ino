@@ -1,12 +1,12 @@
 
 #include <pingSensor.h>
 
-#define TRIGGER_PIN 4
-#define ECHO_PIN 5
-#define MAX_PING_DISTANCE 30
+#define TRIG 4
+#define ECHO 5
+#define MAX_DISTANCE 30
 
 // Create object
-pingSensor *myPinger;
+pingSensor *pingsense;
 
 void setup() {
   // Open serial interface.
@@ -14,14 +14,14 @@ void setup() {
 
   // setup pingSensor object.
   // defaults to 'cm' units of measurement.
-  myPinger = new pingSensor(TRIGGER_PIN, ECHO_PIN, MAX_PING_DISTANCE);
+  pingsense = new pingSensor(TRIGGER_PIN, ECHO_PIN, MAX_PING_DISTANCE);
 }
 
 void loop() {
-  myPinger->doPing();
-  if(myPinger->checkRange()) {
+  pingsense->doPing();
+  if(pingsense->checkRange()) {
     Serial.print("Object detected at ");
-    Serial.print(myPinger->getDistance());
+    Serial.print(pingsense->getDistance());
     Serial.println(" cm");
   }
   delay(500);
