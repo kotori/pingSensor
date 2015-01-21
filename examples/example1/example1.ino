@@ -1,4 +1,7 @@
-
+/*
+ * pingSensor example #1
+ *  This sketch demonstrates the pingSensor library with a 4-pin PING sensor.
+ */
 #include <pingSensor.h>
 
 #define TRIG 4
